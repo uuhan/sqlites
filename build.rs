@@ -10,7 +10,7 @@ fn main() {
         .flag_if_supported("-Wundef");
 
     // from libsqlite3-sys
-    let dep_includes = std::env::var("DEP_SQLITE3_INCLUDE").expect("rusqlite include headers");
+    let dep_includes = std::env::var("DEP_SQLITE3_INCLUDE").expect("sqlite3 include");
 
     #[cfg(target_os = "linux")]
     build.define("_GNU_SOURCE", None);
